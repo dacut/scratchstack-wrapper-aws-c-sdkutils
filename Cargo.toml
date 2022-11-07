@@ -1,0 +1,30 @@
+[package]
+name = "scratchstack-wrapper-aws-c-sdkutils"
+description = "Scratchstack Rust wrapper around the aws-c-sdkutils library"
+authors = ["David Cuthbert <dacut@kanga.org>"]
+edition = "2021"
+homepage = "https://github.com/dacut/scratchstack-wrapper-aws-c-sdkutils"
+license = "Apache-2.0"
+repository = "https://github.com/dacut/scratchstack-wrapper-aws-c-sdkutils"
+version = "0.1.0-alpha.5"
+build = "build.rs"
+include = [
+    "/include/aws/sdkutils/*.h",
+    "/include/aws/sdkutils/*.inl",
+    "/src",
+    "Cargo.toml",
+    "build.rs",
+]
+links = "aws-c-sdkutils"
+
+[lib]
+name = "scratchstack_wrapper_aws_c_sdkutils"
+crate-type = ["lib"]
+doctest = false
+
+[build-dependencies]
+bindgen = "^0.61"
+
+[dependencies]
+scratchstack-wrapper-aws-c-common = "=0.1.0-alpha.5"
+libc = "^0.2"
