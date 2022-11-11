@@ -6,7 +6,7 @@ edition = "2021"
 homepage = "https://github.com/dacut/scratchstack-wrapper-aws-c-sdkutils"
 license = "Apache-2.0"
 repository = "https://github.com/dacut/scratchstack-wrapper-aws-c-sdkutils"
-version = "0.1.0-alpha.5"
+version = "0.1.0-alpha.7"
 build = "build.rs"
 include = [
     "/include/aws/sdkutils/*.h",
@@ -26,5 +26,5 @@ doctest = false
 bindgen = "^0.61"
 
 [dependencies]
-scratchstack-wrapper-aws-c-common = "=0.1.0-alpha.5"
+scratchstack-wrapper-aws-c-common = "0.1.0-alpha.7"
 libc = "^0.2"
